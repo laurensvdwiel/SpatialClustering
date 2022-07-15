@@ -71,7 +71,7 @@ def compute_geometric_mean_distance(d_ij, M, pseudo_count = None, normalize = Fa
     k = len(M)
     
     # compute geometric mean distance as d_k
-    d_k = M_d.prod()**(1.0/k)
+    d_k = M_d.prod(dtype='float128')**(1.0/k)
     
     # return geometric mean distance
     return d_k
